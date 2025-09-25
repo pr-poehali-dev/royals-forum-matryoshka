@@ -7,6 +7,7 @@ import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const navigate = useNavigate();
   const forumSections = [
     {
       id: 1,
@@ -178,7 +179,7 @@ const Index = () => {
         {/* Forum Sections */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {forumSections.map((section) => (
-            <Card key={section.id} className="bg-card/50 backdrop-blur hover:bg-card/70 transition-all duration-300 border-primary/10 hover:border-royal-gold/30 hover:shadow-lg hover:shadow-royal-gold/10">
+            <Card key={section.id} className="bg-card/50 backdrop-blur hover:bg-card/70 transition-all duration-300 border-primary/10 hover:border-royal-gold/30 hover:shadow-lg hover:shadow-royal-gold/10 cursor-pointer" onClick={() => navigate(`/section/${section.id}`)}>
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -186,7 +187,7 @@ const Index = () => {
                       <Icon name={section.icon as any} className={section.color.includes('royal-gold') ? 'text-royal-gold' : section.color.includes('royal-red') ? 'text-royal-red' : 'text-primary'} size={24} />
                     </div>
                     <div>
-                      <CardTitle className="text-lg text-foreground">{section.title}</CardTitle>
+                      <CardTitle className="text-lg text-foreground hover:text-primary transition-colors">{section.title}</CardTitle>
                       <CardDescription className="text-sm">{section.description}</CardDescription>
                     </div>
                   </div>

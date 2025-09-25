@@ -179,7 +179,7 @@ const Section = () => {
           <CardContent className="p-0">
             {sampleTopics.map((topic, index) => (
               <div key={topic.id}>
-                <div className="p-6 hover:bg-card/70 transition-colors cursor-pointer">
+                <div className="p-6 hover:bg-card/70 transition-colors cursor-pointer" onClick={() => navigate(`/section/${sectionId}/topic/${topic.id}`)}>
                   <div className="flex items-start gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
