@@ -165,6 +165,15 @@ const Index = () => {
           </CardContent>
         </Card>
 
+        {/* Forum Sections Header */}
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-foreground">Разделы форума</h2>
+          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-primary/25">
+            <Icon name="Plus" size={18} className="mr-2" />
+            Добавить тему
+          </Button>
+        </div>
+
         {/* Forum Sections */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {forumSections.map((section) => (
