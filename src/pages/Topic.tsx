@@ -84,6 +84,16 @@ const Topic = () => {
       isOwner: false,
       roleColor: 'text-blue-500',
       roleBadge: 'bg-blue-500/10 border-blue-500/30'
+    },
+    {
+      id: 5,
+      author: 'Legend_Warrior',
+      role: 'Легенда',
+      avatar: 'LW',
+      content: 'Наша семья наконец-то имеет достойную площадку для общения! Я помню времена, когда мы только начинали... Отличная работа, команда! 👑',
+      timestamp: '25 сентября 2024, 18:45',
+      likes: 25,
+      isOwner: false
     }
   ];
 
@@ -164,8 +174,12 @@ const Topic = () => {
               <CardContent className="p-6">
                 <div className="flex gap-4">
                   <div className="flex flex-col items-center gap-2 min-w-[100px]">
-                    <Avatar className="w-12 h-12">
-                      <AvatarFallback className="bg-primary text-primary-foreground font-semibold">
+                    <Avatar className={`w-12 h-12 ${
+                      post.author === 'Legend_Warrior' ? 'ring-2 ring-yellow-500 shadow-lg shadow-yellow-500/25' : ''
+                    }`}>
+                      <AvatarFallback className={`font-semibold ${
+                        post.author === 'Legend_Warrior' ? 'bg-gradient-to-br from-yellow-400 to-orange-500 text-black' : 'bg-primary text-primary-foreground'
+                      }`}>
                         {post.avatar}
                       </AvatarFallback>
                     </Avatar>
@@ -175,11 +189,13 @@ const Topic = () => {
                         post.author === 'AdminRoyals' ? 'bg-red-500/10 text-red-500 border-red-500/30' :
                         post.author === 'ViceLeaderRS' ? 'bg-yellow-500/10 text-yellow-500 border-yellow-500/30' :
                         post.author === 'Timur_Sheldi' ? 'bg-blue-500/10 text-blue-500 border-blue-500/30' :
+                        post.author === 'Legend_Warrior' ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black border-yellow-500/50 shadow-lg shadow-yellow-500/25' :
                         'bg-gray-500/10 text-gray-500 border-gray-500/30'
                       }`}>
                         {post.author === 'AdminRoyals' ? 'Администратор' :
                          post.author === 'ViceLeaderRS' ? 'Зам. лидера' :
                          post.author === 'Timur_Sheldi' ? 'Модератор' :
+                         post.author === 'Legend_Warrior' ? '👑 Легенда 👑' :
                          post.role}
                       </Badge>
                     </div>
