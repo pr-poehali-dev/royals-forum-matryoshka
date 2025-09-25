@@ -72,6 +72,16 @@ const Topic = () => {
       timestamp: '25 сентября 2024, 16:20',
       likes: 5,
       isOwner: false
+    },
+    {
+      id: 4,
+      author: 'Timur_Sheldi',
+      role: 'Участник семьи',
+      avatar: 'TS',
+      content: 'Отлично! Наконец-то у нас есть свой форум. Теперь будет намного проще координировать наши действия и делиться информацией.',
+      timestamp: '25 сентября 2024, 17:15',
+      likes: 3,
+      isOwner: false
     }
   ];
 
