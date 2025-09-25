@@ -76,12 +76,14 @@ const Topic = () => {
     {
       id: 4,
       author: 'Timur_Sheldi',
-      role: 'Участник семьи',
+      role: 'Модератор',
       avatar: 'TS',
       content: 'Отлично! Наконец-то у нас есть свой форум. Теперь будет намного проще координировать наши действия и делиться информацией.',
       timestamp: '25 сентября 2024, 17:15',
       likes: 3,
-      isOwner: false
+      isOwner: false,
+      roleColor: 'text-blue-500',
+      roleBadge: 'bg-blue-500/10 border-blue-500/30'
     }
   ];
 
@@ -169,7 +171,17 @@ const Topic = () => {
                     </Avatar>
                     <div className="text-center">
                       <div className="font-medium text-sm text-foreground">{post.author}</div>
-                      <div className="text-xs text-muted-foreground">{post.role}</div>
+                      <Badge variant="outline" className={`text-xs ${
+                        post.author === 'AdminRoyals' ? 'bg-red-500/10 text-red-500 border-red-500/30' :
+                        post.author === 'ViceLeaderRS' ? 'bg-yellow-500/10 text-yellow-500 border-yellow-500/30' :
+                        post.author === 'Timur_Sheldi' ? 'bg-blue-500/10 text-blue-500 border-blue-500/30' :
+                        'bg-gray-500/10 text-gray-500 border-gray-500/30'
+                      }`}>
+                        {post.author === 'AdminRoyals' ? 'Администратор' :
+                         post.author === 'ViceLeaderRS' ? 'Зам. лидера' :
+                         post.author === 'Timur_Sheldi' ? 'Модератор' :
+                         post.role}
+                      </Badge>
                     </div>
                     {post.isOwner && (
                       <Badge variant="secondary" className="text-xs bg-yellow-500/10 text-yellow-500 border-yellow-500/30">

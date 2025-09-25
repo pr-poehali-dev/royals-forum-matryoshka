@@ -14,7 +14,7 @@ const Profile = () => {
   const userProfile = {
     username: 'Timur_Sheldi',
     displayName: 'Timur Sheldi',
-    role: 'Участник семьи',
+    role: 'Модератор',
     rank: 'Активный игрок',
     joinDate: '15 августа 2024',
     lastActive: 'Сейчас в сети',
