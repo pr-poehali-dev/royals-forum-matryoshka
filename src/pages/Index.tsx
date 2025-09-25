@@ -170,10 +170,16 @@ const Index = () => {
         {/* Forum Sections Header */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-foreground">Разделы форума</h2>
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-primary/25">
-            <Icon name="Plus" size={18} className="mr-2" />
-            Добавить тему
-          </Button>
+          <div className="flex gap-3">
+            <Button variant="outline" onClick={() => navigate('/profile')} className="border-primary/30 hover:bg-primary/10">
+              <Icon name="User" size={18} className="mr-2" />
+              Мой профиль
+            </Button>
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-primary/25">
+              <Icon name="Plus" size={18} className="mr-2" />
+              Добавить тему
+            </Button>
+          </div>
         </div>
 
         {/* Forum Sections */}
