@@ -63,10 +63,19 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				royal: {
-					red: '#8B0000',
-					gold: '#FFD700',
-					dark: '#2C2C2C',
-					darker: '#1A1A1A'
+					red: '#DC2626',
+					gold: '#FFC107',
+					dark: '#1E293B',
+					darker: '#0F172A',
+					blue: '#3B82F6',
+					green: '#10B981'
+				},
+				matryoshka: {
+					red: '#EF4444',
+					blue: '#3B82F6',
+					gold: '#F59E0B',
+					dark: '#1E293B',
+					darker: '#0F172A'
 				}
 			},
 			borderRadius: {
